@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NASAPODViewController" customModule="NASAPOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QQ4-hm-WJT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="uDj-Zr-cW7"/>
+                                </constraints>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZfK-hO-GAV">
+                                <date key="date" timeIntervalSinceReferenceDate="500069255.41337597">
+                                    <!--2016-11-05 20:07:35 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="changeDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="GgV-35-AT1"/>
+                                </connections>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Osj-SD-uPI">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="lVS-VK-awC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZfK-hO-GAV" secondAttribute="bottom" id="0d8-cl-s3O"/>
+                            <constraint firstItem="QQ4-hm-WJT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7BQ-fg-nK3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QQ4-hm-WJT" secondAttribute="trailing" id="GKx-i0-O0e"/>
+                            <constraint firstAttribute="trailing" secondItem="ZfK-hO-GAV" secondAttribute="trailing" id="UdX-hT-9xh"/>
+                            <constraint firstItem="ZfK-hO-GAV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cP4-ba-UtR"/>
+                            <constraint firstItem="ZfK-hO-GAV" firstAttribute="top" secondItem="Osj-SD-uPI" secondAttribute="bottom" id="q3f-7G-dPh"/>
+                            <constraint firstItem="Osj-SD-uPI" firstAttribute="top" secondItem="QQ4-hm-WJT" secondAttribute="bottom" constant="5" id="sYe-G2-pBa"/>
+                            <constraint firstItem="Osj-SD-uPI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tA7-J2-YCz"/>
+                            <constraint firstItem="QQ4-hm-WJT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x9M-nF-Z1C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Osj-SD-uPI" secondAttribute="trailing" id="xZw-Cq-PuT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="ZfK-hO-GAV" id="pDf-gA-sCP"/>
+                        <outlet property="descriptionTextView" destination="Osj-SD-uPI" id="ges-el-WMy"/>
+                        <outlet property="pictureOfTheDayImageView" destination="QQ4-hm-WJT" id="NyI-9V-FEF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
